@@ -9,7 +9,7 @@ public class RotateArray {
        // we need to first iterate over the array
         //then in the new array of the same size as original array , we are going to store the values
         // using the below formula
-        // example -> ( i +k ) -> i-> 0 , k = 3  (1+4) % arr length , it will store that element in that position.
+        // example -> ( i +k ) -> i-> 0 , k = 3  (1+3) % arr length , it will store that element in that position.
 
         for(int i=0; i < arr.length; i++){
             newArr[(i+k)%arr.length] = arr[i];

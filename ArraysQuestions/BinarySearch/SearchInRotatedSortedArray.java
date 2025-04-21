@@ -20,7 +20,7 @@ public class SearchInRotatedSortedArray {
                 System.out.println(mid);
                 break;
             }
-
+            // Check if the left part is sorted
             if(num[low] <= num[mid]){
                 if(num[low] <= target && target <= num[mid]){
                     //eliminate the right half

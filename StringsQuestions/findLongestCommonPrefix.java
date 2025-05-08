@@ -12,6 +12,7 @@ public class findLongestCommonPrefix {
         for(int i=1; i< longestCommonPrefixString.length; i++){
 
             while(longestCommonPrefixString[i].indexOf(prefix) != 0) // check if the prefix is at the start
+                //keep shrinking the string until it's appeared at the start of the current word.
             {
                 prefix = prefix.substring(0, prefix.length() -1);//start removing the character from last
 
@@ -21,6 +22,6 @@ public class findLongestCommonPrefix {
             }
 
         }
-        System.out.println("longest common prefix"+ " "+prefix);
+        System.out.println("longest common prefix --> "+ " "+prefix);
     }
 }

@@ -17,7 +17,8 @@ public class validAnagram {
         //create a hashmap of Character , Integer and store the values from the first string
         //after iterating the second string , check , if we donot have the character already present in the map
         // then return false as it will donot form an anagram
-        //if the key is present for two times then remove from the second iteration
+        //if the key is present for two times then we need to reduce the count of that particular key
+        //if the key's value is 1 , we remove from hashmap and return true.
 
         HashMap<Character, Integer> map = new HashMap<>();
 

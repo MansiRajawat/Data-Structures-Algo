@@ -12,7 +12,7 @@ public class GroupAnagrams {
        //we need a hashmap it stores the Strings as key and List of string as value
 
         //we need to check if the key is already present in hashmap, if not add the element in hashmap with
-        // an empty arraylist as value and keep store the keep adding to the arraylist.
+        // an empty arraylist as value and keep adding to the arraylist.
         //we need to create a List<List<String>> and store the map values
         //then we need to iterate over the List<String> to get the result
         HashMap<String, List<String>> map = new HashMap<>();

@@ -10,7 +10,11 @@ public class reverseAString {
     private static String reverseAString(String str1) {
         StringBuilder sb = new StringBuilder();
 
-        String [] strArr = str1.split(" ");
+        //1. create a string builder to append the string result as well as append the spaces
+        //2. split the string into arrays ["coding" , "to" , "welcome"]
+        //3. iterate from the last and then append the result and check if the index is not 0 then append spaces
+//String [] strArr = str1.split("\\s+"); -> this means
+        String [] strArr = str1.split("\\s+");
 
         for(int i= strArr.length -1; i >=0; i--){
             sb.append(strArr[i]);

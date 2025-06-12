@@ -14,11 +14,29 @@ public class CountDistinctSubstring {
 
         //we need a set interface to store the elements
 
-      int result = findAllDistinctSubstringsApproach1(str);
-        System.out.println("approach 1 result --> "+result);
+     // int result = findAllDistinctSubstringsApproach1(str);
+       // System.out.println("approach 1 result --> "+result);
 
-        int resultApproach2 = findAllDistinctSubstringsApproach2(str);
-        System.out.println("approach 2 result --> "+ resultApproach2);
+       // int resultApproach2 = findAllDistinctSubstringsApproach2(str);
+        //System.out.println("approach 2 result --> "+ resultApproach2);
+
+        Set<String> set = new HashSet<>();
+        for(int i=0; i < str.length(); i++){
+
+            for (int j =i; j < str.length(); j++){
+
+                StringBuilder sb = new StringBuilder();
+
+                for(int k =i ; k <= j; k++){
+                    sb.append(str.charAt(k));
+                }
+
+                set.add(sb.toString());
+
+            }
+        }
+
+        System.out.println(set.size());
 
     }
 
@@ -48,6 +66,7 @@ public class CountDistinctSubstring {
         }
        return set.size();
     }
+
 
 
 }

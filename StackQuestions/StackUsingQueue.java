@@ -11,8 +11,8 @@ public class StackUsingQueue {
     public void push(int x) {
 //intution is
         //1. first create 2 queue
-        //2. then for push , first store the element in second queue and loop till the first queue is not empty then move all the
-        //element from first queue to second queue
+        //2. then for push , first store the element in second queue and loop till the first queue is not empty then remove the
+        //element from first queue and add it to second queue
         //3. then swap the elements present in second queue to first queue
 
         q2.add(x);

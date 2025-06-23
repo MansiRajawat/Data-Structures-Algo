@@ -16,6 +16,7 @@ public class GetFibonacciSeriesOfNNumbers {
             num2 = num3;
 
         }
+        
 
     }
 }

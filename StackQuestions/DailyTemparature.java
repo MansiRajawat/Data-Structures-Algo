@@ -32,7 +32,7 @@ public class DailyTemparature {
         //this problem is similar to next greater element .
 
         for (int i = n - 1; i >= 0; i--) {
-            while (!st.isEmpty() && temperatures[i] >= temperatures[st.peek()]) {
+            while (!st.isEmpty() &&  temperatures[st.peek()] <= temperatures[i]) {
                 st.pop();
             }
             if(st.isEmpty()){

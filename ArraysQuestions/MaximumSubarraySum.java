@@ -14,5 +14,18 @@ public class MaximumSubarraySum {
             }
         }
         System.out.println(result);
+
+        //kadane's algorithm
+
+        int current_max = arr1[0];
+        int global_max = arr1[0];
+
+        for(int i=0; i < arr1.length; i++){
+            current_max = Math.max(arr1[i], current_max + arr1[i]);
+
+            global_max = Math.max(current_max, global_max);
+        }
+
+        System.out.println(global_max);
     }
 }

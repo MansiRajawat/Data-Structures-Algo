@@ -12,15 +12,15 @@ public class AssignCookies {
         // and output the maximum number.
 
 
-        int[] children = {4, 5, 1};
+        int[] children = {4, 5, 1}; //145 246
         int[] cookies = {6, 4, 2};
 
 
         //we need to sort both the arrays , in such a way that, each student can get the corresponding cookie ,
-        //in that way we can get the maximum number of children
+        // in that way we can get the maximum number of children.
 
         //if the current cookie can satisfy the maximum if of student then move to the next student
-        //else move to the next cookie
+        //else move to the next cookie.
 
 
         Arrays.sort(children);

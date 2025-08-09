@@ -2,7 +2,7 @@ package ArraysQuestions.TwoDimentionalArrays;
 
 import java.util.Arrays;
 
-public class SetMatrixZero {
+public class SetMatrix {
     public static void main(String[] args) {
         int[][] arr = {
                 {1, 2, 3},

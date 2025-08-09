@@ -1,3 +1,5 @@
+package ArraysQuestions.TwoDimentionalArrays;
+
 public class SprialMatrixZero {
     public static void main(String[] args) {
         int[][] matrix = {

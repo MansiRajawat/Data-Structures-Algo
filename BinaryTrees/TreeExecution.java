@@ -17,17 +17,30 @@ public class TreeExecution {
         root.right.right = new TreeNode(7);
 
         List<Integer> result = new ArrayList<>();
-        obj.binaryTreeInorderRecursive(root, result);
+       // obj.binaryTreeInorderRecursive(root, result);
 
-        System.out.println("Inorder Traversal: " + result);
+      //  System.out.println("Inorder Traversal: " + result);
 
         System.out.println("----------------------------------------------");
 
         BinaryTreePreOrder obj2 = new BinaryTreePreOrder();
 
-        obj2.preOrderTraversalRecursive(root, result);
+       // obj2.preOrderTraversalRecursive(root, result);
 
-        System.out.println("Preorder Traversal: " + result);
+      //  System.out.println("Preorder Traversal: " + result);
 
+        System.out.println("----------------------------------------------");
+
+        BinaryTreePostOrder obj3 = new BinaryTreePostOrder();
+        obj3.postOrderTraversalRecursive(root, result);
+
+        System.out.println("Postorder Traversal: " + result);
+
+        System.out.println("----------------------------------------------");
+
+        BinaryTreeLevelOrder obj4 = new BinaryTreeLevelOrder();
+        List<List<Integer>> resultVal =  obj4.levelOrderTraversal(root);
+
+        System.out.println("Levelorder Traversal: " + resultVal);
     }
 }

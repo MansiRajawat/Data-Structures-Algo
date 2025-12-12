@@ -4,36 +4,37 @@ import java.util.Stack;
 
 public class ValidParanthesis {
 
-	public static void main(String[] args) {
-		Stack<Character> validParanthesis = new Stack<>();
+    public static void main(String[] args) {
+        Stack<Character> validParanthesis = new Stack<>();
 
-		String str = "((({})))";
+        String str = "((({})))";
 
-		// char[] lastOpen = str.toCharArray();
-		for (int i = 0; i < str.length(); i++) {
+        System.out.println(isBalancedParanthesis(str));
 
-			if (str.charAt(i) == '(' || str.charAt(i) == '{') {
 
-				validParanthesis.add(str.charAt(i));
-			} else {
-				if (validParanthesis.isEmpty()) {
-					System.out.println("false");
-				}
-			}
+    }
 
-			char peekchar = validParanthesis.peek();
+    private static boolean isBalancedParanthesis(String str) {
+        Stack<Character> stack = new Stack<>();
 
-			if ((str.charAt(i) == ')' && peekchar == '(') || (str.charAt(i) == '}' && peekchar == '{')) {
-				validParanthesis.pop();
-				System.out.println("valid paranthesis");
-			} else {
-				System.out.println(" no element ");
-				break;
-			}
-		}
-		
-		
+        for (char ch : str.toCharArray()) {
 
-	}
+            if (ch == '(' || ch == '{' || ch == '[') {
+                stack.push(ch);
+            } else {
+                if (stack.isEmpty()) return false;
+
+                char top = stack.pop();
+                if (ch == ')' && top != '(') return false;
+                if (ch == '}' && top != '{') return false;
+                if (ch == ']' && top != '[') return false;
+
+
+            }
+
+
+        }
+        return stack.empty();
+    }
 
 }

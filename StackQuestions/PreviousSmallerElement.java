@@ -15,7 +15,7 @@ public class PreviousSmallerElement {
                 continue;
             }
 
-            while(!st.isEmpty() && st.peek() >= currElement){
+            while(!st.isEmpty() && currElement <= st.peek()){
                 st.pop();
             }
 

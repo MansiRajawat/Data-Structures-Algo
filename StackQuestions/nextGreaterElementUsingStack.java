@@ -21,23 +21,11 @@ public class nextGreaterElementUsingStack {
                 newArr[i] = -1;
                 continue;
             }
-
-            //if the top of the stack is greater than the element in array , it is the next greatest element
-
-//            if(st.peek() > currElement){
-//                st.push(currElement);
-//                newArr[i] = st.peek();
-//                continue;
-//            }
-
-            //if the element in array is greater than the element in stack, or stack element is less than the array element
-            //we need to pop the element from stack
-
-            while(st.peek() <= currElement && !st.isEmpty()){
+            while( !st.isEmpty() &&  currElement >= st.peek()){
                 st.pop();
             }
 
-            //if the stack is empty , add -1 in the new arr, else pick the top element of the stack
+
 
             if(st.isEmpty()){
                 newArr[i] = -1;

@@ -29,7 +29,6 @@ public class ValidParanthesis {
                 if (ch == '}' && top != '{') return false;
                 if (ch == ']' && top != '[') return false;
 
-                stack.pop();
             }
 
 

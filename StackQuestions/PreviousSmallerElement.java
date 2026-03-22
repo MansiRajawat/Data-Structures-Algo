@@ -9,11 +9,11 @@ public class PreviousSmallerElement {
         int newArr[] = new int[arr.length];
         for(int i=0; i < arr.length; i++){
             int currElement = arr[i];
-            if(st.isEmpty()){
-                st.push(currElement);
-                newArr[i] = -1;
-                continue;
-            }
+//            if(st.isEmpty()){
+//                st.push(currElement);
+//                newArr[i] = -1;
+//                continue;
+//            }
 
             while(!st.isEmpty() && currElement <= st.peek()){
                 st.pop();

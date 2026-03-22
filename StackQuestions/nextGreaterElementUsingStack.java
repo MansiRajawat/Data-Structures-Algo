@@ -16,11 +16,11 @@ public class nextGreaterElementUsingStack {
             int currElement = arr[i];
 
             //if the stack is empty, we are going to store the current element in the stack and the new arr will store as -1.
-            if(st.isEmpty()){
-                st.push(currElement);
-                newArr[i] = -1;
-                continue;
-            }
+//            if(st.isEmpty()){
+//                st.push(currElement);
+//                newArr[i] = -1;
+//                continue;
+//            }
             while( !st.isEmpty() &&  currElement >= st.peek()){
                 st.pop();
             }

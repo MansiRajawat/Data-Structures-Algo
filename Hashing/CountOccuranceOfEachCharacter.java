@@ -11,12 +11,7 @@ public class CountOccuranceOfEachCharacter {
 		
 		for(int i=0; i < str.length() ; i++) {
 			
-			if(occurenceMap.containsKey(str.charAt(i))) {
-				
-				occurenceMap.put(str.charAt(i), occurenceMap.get(str.charAt(i))+1);
-			} else {
-				occurenceMap.put(str.charAt(i), 1);
-			}
+			occurenceMap.put(str.charAt(i), occurenceMap.getOrDefault(str.charAt(i),0)+1);
 		}
     
 		System.out.println(occurenceMap);

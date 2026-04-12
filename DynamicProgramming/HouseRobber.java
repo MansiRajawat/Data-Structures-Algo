@@ -17,6 +17,22 @@ public class HouseRobber {
 
         int result = rob(nums);
         System.out.println(result);
+
+        //using recursion
+
+        int recursionResult = robUsingRecursion(nums, 0);
+
+        System.out.println(recursionResult);
+    }
+
+    private static int robUsingRecursion(int[] nums, int i) {
+        if( i >= nums.length) return 0;
+
+        int rob = nums[i] + robUsingRecursion(nums, i+2);
+
+        int notRob = robUsingRecursion(nums, i+1);
+
+        return Math.max(rob, notRob);
     }
 
     private static int rob(int[] nums) {

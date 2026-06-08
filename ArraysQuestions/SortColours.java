@@ -24,8 +24,38 @@ public class SortColours {
             }
         }
 
-        for(int i : num){
-            System.out.println("output : "+i);
+//        for(int i : num){
+//            System.out.println("output : "+i);
+//        }
+
+        //optimized solution - Dutch national flag -- 3 pointers
+
+        int low =0;
+        int mid =0;
+        int high = num.length -1;
+
+        while(mid <= high){
+            if(num[mid] == 0){
+                swapOrders(num, low, mid);
+                low++;
+                mid++;
+            }
+            else if(num[mid] == 1){
+                mid++;
+            } else {
+                swapOrders(num, mid, high);
+                high--;
+            }
         }
+        System.out.println("using DNF 3 pointer --> "+ Arrays.toString(num));
     }
+
+    private static void swapOrders(int[] num, int i, int j) {
+        int temp = num[i];
+        num[i] = num[j];
+        num[j] = temp;
+
+    }
+
+
 }

@@ -27,7 +27,7 @@ public class PermutationInString {
             //after that I need to find all the substrings from s2 from index till index + s1.length
             //sort the substring and store it in a new string  s22vand check if the s11 equals with s2 if yes return true else false
 
-            for(int i = 0; i < s2.length() - s1.length(); i++){
+            for(int i = 0; i <= s2.length() - s1.length(); i++){
                 String sub = s2.substring(i, i + s1.length()); //in substring from and to is there , from is inclusive and to is exclusive
                 char[] s2Array = sub.toCharArray();
                 Arrays.sort(s2Array);

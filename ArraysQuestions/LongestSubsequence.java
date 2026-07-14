@@ -1,10 +1,41 @@
 package ArraysQuestions;
 
+import java.util.HashSet;
+
 public class LongestSubsequence {
     public static void main(String[] args) {
         int[] arr1 = {100, 4, 200, 1, 3, 2};
         int longestSubSeq = longestConsecutiveSequenceOfAnArray(arr1);
+        int longestSubsequence = longestConsecutiveSequenceOfAnArray2(arr1);
         System.out.println(longestSubSeq);
+        System.out.println(longestSubsequence);
+
+    }
+
+    private static int longestConsecutiveSequenceOfAnArray2(int[] arr) {
+
+        HashSet<Integer> set = new HashSet<>();
+
+        for(int num : arr){
+            set.add(num);
+        }
+        int longest = 0;
+        for(int i=0; i < arr.length ; i++){
+            //check if the set doesn't contain the previous number then go to if check
+            if(!set.contains(arr[i] -1)){
+                int count = 1;
+                //increment the count only when we have the element present
+                for(int j = arr[i] +1; set.contains(j) ; j++){
+                    count++;
+                }
+
+                longest = Math.max(longest, count);
+
+
+            }
+        }
+
+        return longest;
 
     }
 

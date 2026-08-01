@@ -10,28 +10,20 @@ public class ProductOfSubarrayExceptSelf {
     }
 
     private static void productOfSubarrayExceptSelfSolution2(int[] arr) {
-        int [] prefix = new int[arr.length];
-        int [] suffix = new int[arr.length];
         int [] newArr = new int[arr.length];
-        prefix[0] = 1; // we need to set the first index to one
 
-        for(int i = 1; i < arr.length; i++){
-            //for index 1 , it will be like arr[ 1 -1 ] = arr[0] = 10
-            //prefix[1-1] , prefix[0] = which is set as 1 and so on till the loop terminates.
-            prefix[i] = arr[i -1] * prefix[i-1];
-        }
-        // we need to set the last index to one
-        suffix[arr.length -1] = 1;
-
-        for(int i = arr.length -2; i >=0; i--){
-             //for index second last , it will be like arr[ 3+1 ] = arr[4] = 2
-            //prefix[3+1] , prefix[4] = which is set as 1 and so on till the loop terminates.
-            suffix[i] = arr[i+1] * suffix[i+1];
-
-        }
-
+        int leftProduct =1;
+        //get the left product
         for(int i=0; i < arr.length; i++){
-            newArr[i] = prefix[i] * suffix[i];
+            newArr[i] = leftProduct;
+            leftProduct = leftProduct * arr[i];
+        }
+
+        //get the right product
+        int rightProduct=1;
+        for(int i= arr.length-1; i >=0; i--){
+            newArr[i] = newArr[i] * rightProduct;
+            rightProduct = rightProduct * arr[i];
         }
 
         for (int i : newArr){

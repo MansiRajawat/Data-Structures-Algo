@@ -1,5 +1,7 @@
 package ArraysQuestions;
 
+import java.util.Arrays;
+
 public class InsertNumberInArray {
     public static void main(String[] args) {
         int arr2[] = {4,5,6,7};
@@ -22,8 +24,6 @@ public class InsertNumberInArray {
             newArr[i +1] = arr2[i];
         }
 
-        for(int val : newArr){
-            System.out.println(" new arr values   "+ val);
-        }
+        System.out.println(Arrays.toString(newArr));
     }
 }

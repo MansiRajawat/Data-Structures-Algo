@@ -1,4 +1,4 @@
-package ArraysQuestions;
+package Heap;
 
 import java.util.PriorityQueue;
 
